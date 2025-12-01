@@ -1,0 +1,48 @@
+{
+  "name": "poseidon-bls12381",
+  "version": "1.0.2",
+  "description": "Poseidon implementation for the BLS12-381 elliptic curve",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": "git+https://github.com/jmagan/poseidon-bls12381.git",
+  "author": "Juan Salvador Magán Valero",
+  "license": "MIT",
+  "keywords": [
+    "poseidon",
+    "bls12-381",
+    "hash",
+    "hash function",
+    "hashing",
+    "elliptic curve",
+    "zero knowledge",
+    "zk",
+    "zkp",
+    "zcash"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "build": "rm -rf ./lib && tsc --build",
+    "lint": "prettier --write --ignore-unknown src/**/* tests/**/*",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*": "prettier --write --ignore-unknown",
+    "tests/**/*": "prettier --write --ignore-unknown"
+  },
+  "devDependencies": {
+    "@ethereumjs/util": "^10.0.0",
+    "@noble/curves": "^1.9.6",
+    "@types/jest": "^29.5.12",
+    "husky": "^9.0.11",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.10",
+    "pinst": "^3.0.0",
+    "prettier": "3.3.3",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "poseidon-bls12381": "^1.0.2"
+  }
+}
